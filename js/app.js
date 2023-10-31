@@ -12,7 +12,7 @@ window.addEventListener('load', (e) => {
         // console.log(name.value)
       const user = new User(name.value,className.value,seatNo.value);
       const data = new DataStore()
-      data.pushData(user)
+      user.saveUser(user)
       
       
 

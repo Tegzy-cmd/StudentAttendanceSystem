@@ -13,10 +13,8 @@ export class DataStore {
 
   fetchData(){
     Object.keys(localStorage).forEach(key=>{
-      localStorage.getItem(`${key}`)
+    return this.toObject(localStorage.getItem(`${key}`))
     })
   }
-  getData(){
-
-  }
+  
 }
