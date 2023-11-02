@@ -3,16 +3,18 @@ export class User{
     name
     className
     seatNo
-    #data
-    constructor(name,className,seatNo){
+    status
+    #data = new DataStore()
+    constructor(name,className,seatNo,status){
         this.name = name;
         this.className = className
         this.seatNo = seatNo
-        this._data = new DataStore()
+        this.status = status
+        
     }
     
     getUsers(){
-        this.#data.fetchData()
+        return this.#data.fetchKeys()
         
     }
 
@@ -21,6 +23,7 @@ export class User{
        
        
     }
+    
 
 }
 // export default { user }

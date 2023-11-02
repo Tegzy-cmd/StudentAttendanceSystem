@@ -1,20 +1,16 @@
 export class DataStore {
-
+  #key
   pushData(strUser) {
-    localStorage.setItem(this.toString(strUser.name),this.toString(strUser))
+    localStorage.setItem(strUser.name,this.toString(strUser))
   }
 
-  toString(objUser){
-    return JSON.stringify(objUser)
-  }
-  toObject(strUser){
-    return JSON.parse(strUser)
-  }
-
-  fetchData(){
-    Object.keys(localStorage).forEach(key=>{
-    return this.toObject(localStorage.getItem(`${key}`))
-    })
-  }
-  
+  fetchKeys(){
+    return this.#key = Object.keys(localStorage)
+}
+toString(objUser){
+  return JSON.stringify(objUser)
+}
+toObject(strUser){
+  return JSON.parse(strUser)
+}
 }
