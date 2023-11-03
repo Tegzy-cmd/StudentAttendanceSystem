@@ -175,11 +175,13 @@ input[type=submit]{
         }
     }
     #absent{
+        margin-left: 0;
         margin-top: 5px;
     }
     .attendance-btn{
         color: #ffff;
         padding: 5px;
+        width: 100%;
         
     }
     .styled-table {
@@ -191,7 +193,9 @@ input[type=submit]{
         width: 100%;
         box-shadow: 0 0 20px rgba(0, 0, 0, 0.324);
     }
-    
+    th{
+        text-align: center;
+    }
     .styled-table thead tr {
         background-color: #009879;
         
