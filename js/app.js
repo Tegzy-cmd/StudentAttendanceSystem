@@ -27,15 +27,32 @@ function updateTable(){
   let tableBody = document.querySelector('tbody')
   for(key of data){
   let keyObj = ds.toObject(localStorage.getItem(key))
+  let remark
   if(keyObj.status == "NIL"){
         attendance_btn = '<td><input type="button" class="attendance-btn" id="present" value="present"> <input class="attendance-btn" id="absent" type="button" value="absent"></td>'
   }
+  else{
+    attendance_btn = ''
+  }
+
+  switch (keyObj.status) {
+    case 'Present':
+        remark = '<td class="present">'+keyObj.status+'</td>'
+      break;
+      case 'Absent':
+        remark = '<td class="absent">'+keyObj.status+'</td>'
+      break;
+    default:
+      remark = '<td>'+keyObj.status+'</td>'
+      break;
+  }
+  
     tableBody.innerHTML += `
     <tr class="active-row">
                     <td>${keyObj.name}</td>
                     <td>${keyObj.className}</td>
                     <td>${keyObj.seatNo}</td>
-                    <td>${keyObj.status}</td>
+                    ${remark}
                     <td>${attendance_btn}</td>                    
                 </tr>
     `

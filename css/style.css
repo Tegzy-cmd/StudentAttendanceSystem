@@ -29,6 +29,12 @@
     background-color: rgb(244, 52, 52);
     margin-left: 9px;
 }
+.absent{
+    color: rgb(244, 52, 52);
+}
+.present{
+    color: rgb(46, 186, 22);
+}
 .attendance-board{
     >h1{
         color: #009879;
