@@ -39,7 +39,7 @@ window.addEventListener("load", (e) => {
 
 // added submit event listener to the form element 
   form.addEventListener("submit", (e) => {
-    e.preventDefault() // event.preventDefault() method to cancel form default behavoir
+    e.preventDefault() // event.preventDefault() method to cancel form default behavior
     user = new User(name.value, className.value, seatNo.value, status) // created a new user object with form input as parameters
     user.saveUser(user) // Save new User
     location.reload() // reloads page
