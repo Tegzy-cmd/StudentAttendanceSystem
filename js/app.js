@@ -31,7 +31,7 @@ window.addEventListener("load", (e) => {
   absent.addEventListener('click', (e)=>{
     let a = e.target.closest('tr') //use clicked button to get closest table row element
     const b = a.childNodes //get object of all child elements (td elements)
-    let update = new User(b[1].textContent,b[3].textContent,b[5].textContent,'Present') // create a new user object to update the status of the user to absent
+    let update = new User(b[1].textContent,b[3].textContent,b[5].textContent,'Absent') // create a new user object to update the status of the user to absent
     user.saveUser(update) // passed user object to the saveUser method in the User class
     location.reload() // reload page to effect changes
 })
